@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0"
   s.summary      = "YNCodable"
   s.description  = "A description of YNCodable."
-  s.homepage     = "http://EXAMPLE/YNCodable"
+  s.homepage     = "https://github.com/huangyanan1992"
   s.license      = { :type => 'Commercial', :text => '© 2017年 Huang Yanan.' }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => 'https://github.com/huangyanan1992/YNCodable', :tag => s.version }
+  s.source       = { :git => 'https://github.com/huangyanan1992/YNCodable.git', :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
