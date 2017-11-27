@@ -8,6 +8,9 @@
 
 import Foundation
 
+let hyn_decoder = JSONDecoder()
+let hyn_encoder = JSONEncoder()
+
 extension Decodable {
   
   public static func decode(from string: String, keyPath: String? = nil) -> Self? {
@@ -35,13 +38,8 @@ extension Decodable {
     return nil
   }
   
-  public static func decode(from data: Data?) -> Self? {
-    guard let data = data else {
-      debugPrint("data is nil")
-      return nil
-    }
-    let decoder = JSONDecoder()
-    let result = dump(decoder.hyn_decode(self, from: data))
+  public static func decode(from data: Data) -> Self? {
+    let result = hyn_decoder.hyn_decode(self, from: data)
     return result
   }
   
@@ -61,8 +59,7 @@ extension JSONDecoder {
 
 extension Encodable {
   public func encode() -> String {
-    let encoder = JSONEncoder()
-    return encoder.hyn_encode(self)
+    return hyn_encoder.hyn_encode(self)
   }
 }
 

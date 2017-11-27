@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                                 }
                             ]
                         """
-    guard let responseListFromKeypath = ResponseList.decode(from: responseRes, keyPath: "test.res") else {
+    guard let responseListFromKeypath = dump(ResponseList.decode(from: responseRes, keyPath: "test.res")) else {
       return
     }
     print(responseListFromKeypath)
@@ -91,7 +91,7 @@ class ViewController: UIViewController {
     }
     print(responseListFromKeypath.list[0].title)
     
-    guard let listFromKeyPath = [List].decode(from: responseRes, keyPath: "test.res.list") else {
+    guard let listFromKeyPath = dump([List].decode(from: responseRes, keyPath: "test.res.list")) else {
       return
     }
     print(listFromKeyPath)
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     }
     print(listFromKeyPath[0].title)
     
-    guard let responseList = ResponseList.decode(from: response) else {
+    guard let responseList = dump(ResponseList.decode(from: response)) else {
       return
     }
     print(responseList)

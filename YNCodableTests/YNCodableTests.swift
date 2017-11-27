@@ -47,22 +47,46 @@ class YNCodableTests: XCTestCase {
     let jsonString = """
 {"list":[{"title":"title0","series":"series0"},{"title":"title1","series":"series1"},{"title":"title2","series":"series2"}]}
 """
-    print(jsonString)
     var responseList = ResponseList.init(list: [List]())
     for i in 0...2 {
       let list = List.init(title: "title\(i)", series: "series\(i)")
       responseList.list.append(list)
     }
     let encodeString = responseList.encode()
-    print(encodeString)
     XCTAssertTrue(jsonString == encodeString)
   }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+  func testEncodeMeasure() {
+      // This is an example of a performance test case.
+    var responseList = ResponseList.init(list: [List]())
+    for i in 0...10000 {
+      let list = List.init(title: "title\(i)", series: "series\(i)")
+      responseList.list.append(list)
     }
-    
+    print(responseList.encode())
+    self.measure {
+      _ = responseList.encode()
+    }
+  }
+  func testDecodeMeasure() {
+    var jsonString = """
+{"list":[
+"""
+    for i in 0...9999 {
+      if i != 9999 {
+        jsonString.append("""
+          {"title":"title\(i)","series":"series\(i)"},
+          """
+        )
+      } else {
+        jsonString.append("""
+          {"title":"title\(i)","series":"series\(i)"}]}
+          """
+        )
+      }
+    }
+    self.measure {
+      _ = ResponseList.decode(from: jsonString)
+    }
+  }
 }
