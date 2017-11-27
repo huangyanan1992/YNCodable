@@ -4,18 +4,18 @@ YNCodable是基于swift4新特性Codable封装的一行代码实现json与model�
 **1. 常规json串**
     
    	let response = """
-					    {
-					      "list": [
-					          {
-					            "title": "title1 ",
-					            "series": "series"
-					          },
-					          {
-					            "title": "title2"
-					          }
-					      ]
-					    }
-				    """
+                    {
+                     "list": [
+                        {
+                          "title": "title1 ",
+                          "series": "series"
+                        },
+                        {
+                          "title": "title2"
+                        }
+                     ]
+                    }
+                   """
 				    
 该json串中list数组有两个字段，字段title均有值，字段series可能没有值。我们可以定义如下Model：
 
