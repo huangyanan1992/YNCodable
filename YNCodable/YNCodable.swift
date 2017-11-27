@@ -10,29 +10,29 @@ import Foundation
 
 extension Decodable {
   
-  public static func decode(from string: String, keyPath: String) -> Self? {
+  public static func decode(from string: String, keyPath: String? = nil) -> Self? {
     guard let data = string.data(using: .utf8) else {
+      debugPrint("data is nil")
       return nil
     }
-    do {
-      let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-      let object = (json as AnyObject).value(forKeyPath: keyPath)
+    if let keyPath = keyPath, !keyPath.isEmpty {
       do {
-        let objectForKeypath = try JSONSerialization.data(withJSONObject: object ?? "", options: .prettyPrinted)
-        return decode(from: objectForKeypath)
+        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+        let object = (json as AnyObject).value(forKeyPath: keyPath)
+        do {
+          let objectForKeypath = try JSONSerialization.data(withJSONObject: object ?? "", options: .prettyPrinted)
+          return decode(from: objectForKeypath)
+        } catch let error as NSError {
+          debugPrint(error)
+        }
       } catch let error as NSError {
         debugPrint(error)
       }
-    } catch let error as NSError {
-      print(error)
     }
-    
-    return decode(from: data)
-  }
-  
-  public static func decode(from string: String) -> Self? {
-    let data = string.data(using: .utf8)
-    return decode(from: data)
+    else {
+      return decode(from: data)
+    }
+    return nil
   }
   
   public static func decode(from data: Data?) -> Self? {
