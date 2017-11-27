@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  HynCodable
+//  YNCodable
 //
 //  Created by Huang Yanan on 2017/11/27.
 //  Copyright © 2017年 Huang Yanan. All rights reserved.
