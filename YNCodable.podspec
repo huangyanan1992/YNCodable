@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YNCodable"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "YNCodable"
   s.description  = "A description of YNCodable."
   s.homepage     = "https://github.com/huangyanan1992"
