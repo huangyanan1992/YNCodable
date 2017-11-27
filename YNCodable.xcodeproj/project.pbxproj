@@ -13,7 +13,18 @@
 		9A8CA8321FCBA463001F0D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CA8301FCBA463001F0D5A /* Main.storyboard */; };
 		9A8CA8341FCBA463001F0D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CA8331FCBA463001F0D5A /* Assets.xcassets */; };
 		9A8CA8371FCBA463001F0D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CA8351FCBA463001F0D5A /* LaunchScreen.storyboard */; };
+		9AA5C7231FCC0035004BE280 /* YNCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA5C7221FCC0035004BE280 /* YNCodableTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9AA5C7251FCC0035004BE280 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8CA8211FCBA463001F0D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8CA8281FCBA463001F0D5A;
+			remoteInfo = YNCodable;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9A6F75041FCBDFD300384A71 /* YNCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCodable.swift; sourceTree = "<group>"; };
@@ -24,10 +35,20 @@
 		9A8CA8331FCBA463001F0D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A8CA8361FCBA463001F0D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A8CA8381FCBA463001F0D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA5C7201FCC0035004BE280 /* YNCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YNCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA5C7221FCC0035004BE280 /* YNCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YNCodableTests.swift; sourceTree = "<group>"; };
+		9AA5C7241FCC0035004BE280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9A8CA8261FCBA463001F0D5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA5C71D1FCC0035004BE280 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +71,7 @@
 			children = (
 				9A6F75011FCBDFBD00384A71 /* YNCodable */,
 				9A8CA82B1FCBA463001F0D5A /* YNCodableKit */,
+				9AA5C7211FCC0035004BE280 /* YNCodableTests */,
 				9A8CA82A1FCBA463001F0D5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8CA8291FCBA463001F0D5A /* YNCodable.app */,
+				9AA5C7201FCC0035004BE280 /* YNCodableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +96,15 @@
 				9A8CA8381FCBA463001F0D5A /* Info.plist */,
 			);
 			path = YNCodableKit;
+			sourceTree = "<group>";
+		};
+		9AA5C7211FCC0035004BE280 /* YNCodableTests */ = {
+			isa = PBXGroup;
+			children = (
+				9AA5C7221FCC0035004BE280 /* YNCodableTests.swift */,
+				9AA5C7241FCC0035004BE280 /* Info.plist */,
+			);
+			path = YNCodableTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +127,24 @@
 			productReference = 9A8CA8291FCBA463001F0D5A /* YNCodable.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9AA5C71F1FCC0035004BE280 /* YNCodableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AA5C7291FCC0035004BE280 /* Build configuration list for PBXNativeTarget "YNCodableTests" */;
+			buildPhases = (
+				9AA5C71C1FCC0035004BE280 /* Sources */,
+				9AA5C71D1FCC0035004BE280 /* Frameworks */,
+				9AA5C71E1FCC0035004BE280 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AA5C7261FCC0035004BE280 /* PBXTargetDependency */,
+			);
+			name = YNCodableTests;
+			productName = YNCodableTests;
+			productReference = 9AA5C7201FCC0035004BE280 /* YNCodableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +158,11 @@
 					9A8CA8281FCBA463001F0D5A = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					9AA5C71F1FCC0035004BE280 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9A8CA8281FCBA463001F0D5A;
 					};
 				};
 			};
@@ -125,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				9A8CA8281FCBA463001F0D5A /* YNCodable */,
+				9AA5C71F1FCC0035004BE280 /* YNCodableTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +193,13 @@
 				9A8CA8371FCBA463001F0D5A /* LaunchScreen.storyboard in Resources */,
 				9A8CA8341FCBA463001F0D5A /* Assets.xcassets in Resources */,
 				9A8CA8321FCBA463001F0D5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA5C71E1FCC0035004BE280 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +216,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9AA5C71C1FCC0035004BE280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AA5C7231FCC0035004BE280 /* YNCodableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9AA5C7261FCC0035004BE280 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8CA8281FCBA463001F0D5A /* YNCodable */;
+			targetProxy = 9AA5C7251FCC0035004BE280 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9A8CA8301FCBA463001F0D5A /* Main.storyboard */ = {
@@ -314,6 +393,40 @@
 			};
 			name = Release;
 		};
+		9AA5C7271FCC0035004BE280 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SL7B4MD27;
+				INFOPLIST_FILE = YNCodableTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyn.YNCodableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YNCodable.app/YNCodable";
+			};
+			name = Debug;
+		};
+		9AA5C7281FCC0035004BE280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SL7B4MD27;
+				INFOPLIST_FILE = YNCodableTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyn.YNCodableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YNCodable.app/YNCodable";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +444,15 @@
 			buildConfigurations = (
 				9A8CA83C1FCBA463001F0D5A /* Debug */,
 				9A8CA83D1FCBA463001F0D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AA5C7291FCC0035004BE280 /* Build configuration list for PBXNativeTarget "YNCodableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AA5C7271FCC0035004BE280 /* Debug */,
+				9AA5C7281FCC0035004BE280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

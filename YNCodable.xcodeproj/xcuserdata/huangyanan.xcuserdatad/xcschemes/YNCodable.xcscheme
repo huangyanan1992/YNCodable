@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9AA5C71F1FCC0035004BE280"
+               BuildableName = "YNCodableTests.xctest"
+               BlueprintName = "YNCodableTests"
+               ReferencedContainer = "container:YNCodable.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
