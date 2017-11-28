@@ -117,33 +117,33 @@ class ViewController: UIViewController {
 }
 
 struct Product: Codable {
-  var name: String = ""
-  var points: Int = 0
-  var description: String = ""
+  var name = ""
+  var points = 0
+  var description = ""
 }
 
 struct Shelves: Codable {
-  var name: String = ""
-  var product: Product = Product()
+  var name = ""
+  var product = Product()
 }
 
 struct MarketList: Codable {
-  var name: String = ""
-  var aisles: [Aisles] = [Aisles]()
+  var name = ""
+  var aisles = [Aisles]()
 }
 
 struct Aisles: Codable {
-  var name: String = ""
-  var shelves: [Shelves] = [Shelves]()
+  var name = ""
+  var shelves = [Shelves]()
 }
 
 
 struct ResponseList: Codable {
-  var list: [List] = [List]()
+  var list = [List]()
 }
 
 struct List: Codable {
-  var title: String = ""
+  var title = ""
   var series: String?
 }
 
