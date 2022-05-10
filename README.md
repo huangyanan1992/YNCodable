@@ -27,7 +27,7 @@ YNCodable是基于swift4新特性Codable封装的一行代码实现json与model�
 	  var title: String = ""
 	  var series: String?
 	}
-> 注意这里series是optional, 因为json串中有可能有，有可能没有的字段必须是optional，不然整个json串都会解析失败，也就是不确定会有的字段一定要用optional。但是这就带来了一个问题，我们的服务器往往是不确定哪天会改字段名字，或者本来确定不会变的哪天就变了，所以为了安全起见，项目中如果使用最好都是optional，如果全是optional，使用起来就很麻烦，各种判断，这个问题我还没有更好的解决方案，如果你有更好的方案，欢迎联系我共同讨论。
+> 注意这里series是optional, 我们假定服务端是不靠谱的，所以所有字段都应该是optional。
 
 使用YNCodable解析
 
