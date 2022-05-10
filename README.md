@@ -27,7 +27,7 @@ YNCodable是基于swift4新特性Codable封装的一行代码实现json与model�
 	  var title: String = ""
 	  var series: String?
 	}
-> 注意这里series是optional, 我们假定服务端是不靠谱的，所以所有字段都应该是optional。
+> 注意这里series是optional, 我们假定服务端是不靠谱的，所以所有字段都应该是optional，或者有默认值。
 
 使用YNCodable解析
 
